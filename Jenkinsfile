@@ -8,20 +8,15 @@ pipeline {
   }
   stages {
     stage('build') {
-      parallel {
-        stage('build') {
-          steps {
-            sh 'npm install --no-optional'
-          }
-        }
-        stage('test') {
-          environment {
-            CI = 'true'
-          }
-          steps {
-            sh ' ./jenkins/scripts/test.sh'
-          }
-        }
+      steps {
+        sh '''
+
+
+npm install -g yarn
+npm install yarn
+
+yarn install
+yarn upgrade npm install '''
       }
     }
   }
