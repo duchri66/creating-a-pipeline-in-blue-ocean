@@ -19,5 +19,10 @@ yarn install
 yarn upgrade npm install '''
       }
     }
+    stage('build2') {
+      steps {
+        sh 'npm install'
+      }
+    }
   }
 }
