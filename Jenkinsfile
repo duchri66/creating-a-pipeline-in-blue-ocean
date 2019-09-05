@@ -36,7 +36,7 @@ yarn upgrade npm install '''
       steps {
         sh ' ./jenkins/scripts/deliver.sh'
         input 'Finished using the web site? (Click "Proceed" to continue)'
-        sh './jenkins/scripts/kill.sh.'
+        sh './jenkins/scripts/kill.sh'
       }
     }
   }
